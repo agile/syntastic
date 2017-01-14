@@ -14,7 +14,7 @@ set cpo&vim
 function! SyntaxCheckers_sh_shellcheck_GetLocList() dict " {{{1
     let makeprg = self.makeprgBuild({
         \ 'args': s:GetShell(),
-        \ 'args_after': '-f gcc' })
+        \ 'args_after': '-x -f gcc' })
 
     let errorformat =
         \ '%f:%l:%c: %trror: %m,' .
